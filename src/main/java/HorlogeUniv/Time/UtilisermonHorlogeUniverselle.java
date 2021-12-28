@@ -1,4 +1,4 @@
-package HorlogeUniv;
+package HorlogeUniv.Time;
 
 public class UtilisermonHorlogeUniverselle {
 
