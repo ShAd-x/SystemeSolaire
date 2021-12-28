@@ -1,8 +1,8 @@
 package HorlogeUniv;
 
-import java.util.Scanner;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class UtilisermonHorlogeUniverselle {
 
@@ -20,11 +20,13 @@ public class UtilisermonHorlogeUniverselle {
         int dureeSimul = 20000;
 
         monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t10 jours se sont ecoulés");
+        //Calendar d = new GregorianCalendar();
 
 
         Thread t1= new Thread(horlUnivun);
 
         System.out.println("Début du programme");
+        //System.out.println("Nous commençons à la date: " + d.getTime());
 
         t1.start();
         pause(dureeSimul);
@@ -33,5 +35,7 @@ public class UtilisermonHorlogeUniverselle {
 
         pause(1000);
         System.out.println("Fin du programme");
+
+
     }
 }

@@ -1,9 +1,13 @@
 package HorlogeUniv;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class monHorlogeUniverselle implements Runnable{
 
     private boolean continuer;
     private String message;
+    private Calendar date = new GregorianCalendar();
 
     public monHorlogeUniverselle(String message)
     {
@@ -22,6 +26,8 @@ public class monHorlogeUniverselle implements Runnable{
             try {
                 Thread.sleep(5000);
                 System.out.println(message);
+                date.add(Calendar.DATE, 10);
+                System.out.println(date.getTime());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
