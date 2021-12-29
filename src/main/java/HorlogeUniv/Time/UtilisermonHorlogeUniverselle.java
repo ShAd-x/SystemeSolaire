@@ -1,11 +1,21 @@
 package HorlogeUniv.Time;
 
+import HorlogeUniv.Astres.Astres;
+import HorlogeUniv.Astres.Planete;
 import HorlogeUniv.Outils.Draw;
 
 public class UtilisermonHorlogeUniverselle {
 
     public static void main(String[] args) {
         monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t1 jour s'est écoulé",2);
+        Planete Mercure = new Planete(87.96);
+        Planete Venus = new Planete(224.69);
+        Planete Terre = new Planete(365.256);
+        Planete Mars = new Planete(686.97);
+        Planete Jupiter = new Planete(4332.589);
+        Planete Saturne = new Planete(10759.23);
+        Planete Uranus = new Planete(30685.4);
+        Planete Neptune = new Planete(60216.8);
 
         Draw gui = new Draw("Le Système solaire");
         gui.setCanvasSize(1000,1000);

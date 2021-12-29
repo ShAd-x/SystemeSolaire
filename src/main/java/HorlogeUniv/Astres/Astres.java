@@ -2,13 +2,13 @@ package HorlogeUniv.Astres;
 
 
 public abstract class Astres {
-    private float dureeRevolutionJours;
+    private double dureeRevolutionJours;
 
-    public Astres(float dureeRevolutionJours) {
+    public Astres(double dureeRevolutionJours) {
         this.dureeRevolutionJours = dureeRevolutionJours;
     }
 
-    public float getDureeRevolutionJours() {
+    public double getDureeRevolutionJours() {
         return dureeRevolutionJours;
     }
 

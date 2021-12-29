@@ -3,7 +3,7 @@ package HorlogeUniv.Astres;
 public class Planete extends Astres {
 
 
-    public Planete(float dureeRevolutionJours) {
+    public Planete(double dureeRevolutionJours) {
         super(dureeRevolutionJours);
     }
 
