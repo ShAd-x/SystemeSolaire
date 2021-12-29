@@ -3,6 +3,8 @@ package HorlogeUniv.Time;
 import HorlogeUniv.Astres.Astres;
 import HorlogeUniv.Astres.Planete;
 import HorlogeUniv.Outils.Draw;
+import javax.swing.*;
+import java.awt.*;
 
 public class UtilisermonHorlogeUniverselle {
 
@@ -17,7 +19,10 @@ public class UtilisermonHorlogeUniverselle {
         Planete Uranus = new Planete(30685.4);
         Planete Neptune = new Planete(60216.8);
 
-        Draw gui = new Draw("Le Système solaire");
+        Neptune.DrawAstre();
+
+        /*Draw gui = new Draw("Le Système solaire");
+
         gui.setCanvasSize(1000,1000);
         gui.setPenColor(Draw.ORANGE);
         gui.filledCircle(0.5, 0.55, 0.02);
@@ -48,6 +53,8 @@ public class UtilisermonHorlogeUniverselle {
 
         gui.setPenColor(Draw.BOOK_BLUE);
         gui.filledCircle(0.90, 0.55, 0.005);
+
+         */
 
         Thread t1 = new Thread(horlUnivun);
         System.out.println("Début du programme");

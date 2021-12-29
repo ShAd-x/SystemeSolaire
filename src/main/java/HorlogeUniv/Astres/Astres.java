@@ -1,7 +1,10 @@
 package HorlogeUniv.Astres;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
-public abstract class Astres {
+public  abstract class Astres extends JFrame {
     private double dureeRevolutionJours;
 
     public Astres(double dureeRevolutionJours) {
@@ -34,6 +37,19 @@ public abstract class Astres {
 
         // use whichever Draw method is provided by your API
         drawSphere(drawX, drawY, sphereRadius);
+    }
+
+    public void DrawAstre(){
+        setTitle("Drawing a Circle");
+        setSize(250, 250);
+        setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+    }
+    @Override
+    public void paint(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.drawRoundRect(40, 50, 90, 90, 200, 200);
     }
 
 
