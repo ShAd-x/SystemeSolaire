@@ -7,28 +7,24 @@ import java.awt.*;
 
 
 public abstract class Astres {
-    private double dureeRevolutionJours;
+
     private double x;
     private double y;
     private double rayon;
     private Color couleur;
 
-    public Astres(double dureeRevolutionJours, double x, double y, double rayon, Color couleur) {
-        this.dureeRevolutionJours = dureeRevolutionJours;
+    public Astres(double x, double y, double rayon, Color couleur) {
         this.x = x;
         this.y = y;
         this.rayon = rayon;
         this.couleur = couleur;
     }
 
-    public double getDureeRevolutionJours() {
-        return dureeRevolutionJours;
-    }
 
     public void drawSphere(double drawX, double drawY, double sphereRadius) {
     }
 
-    public void printAstres(Color couleur, double x, double y, double rayon){
+    public void printAstres(double x, double y){
         StdDraw.setPenRadius(0.05);
         StdDraw.setPenColor(couleur);
         StdDraw.filledCircle(x, y, rayon);
@@ -40,6 +36,14 @@ public abstract class Astres {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
     }
 
     public void drawOrbitingSphere(int timeInterval) {
