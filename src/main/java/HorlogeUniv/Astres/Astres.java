@@ -13,8 +13,12 @@ public abstract class Astres {
     private double rayon;
     private Color couleur;
 
-    public Astres(double dureeRevolutionJours) {
+    public Astres(double dureeRevolutionJours, double x, double y, double rayon, Color couleur) {
         this.dureeRevolutionJours = dureeRevolutionJours;
+        this.x = x;
+        this.y = y;
+        this.rayon = rayon;
+        this.couleur = couleur;
     }
 
     public double getDureeRevolutionJours() {
@@ -24,7 +28,7 @@ public abstract class Astres {
     public void drawSphere(double drawX, double drawY, double sphereRadius) {
     }
 
-    public void printPlanete(Color couleur, double x, double y, double rayon){
+    public void printAstres(Color couleur, double x, double y, double rayon){
         StdDraw.setPenRadius(0.05);
         StdDraw.setPenColor(couleur);
         StdDraw.filledCircle(x, y, rayon);
