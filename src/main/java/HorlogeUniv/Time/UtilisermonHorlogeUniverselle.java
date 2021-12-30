@@ -25,7 +25,7 @@ public class UtilisermonHorlogeUniverselle {
         List<Astres> systsol;
 
         systsol = Arrays.asList(
-                Soleil,
+
                 Mercure,
                 Venus,
                 Terre,
