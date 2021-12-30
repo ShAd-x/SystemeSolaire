@@ -8,8 +8,8 @@ import java.awt.*;
 
 public abstract class Astres {
 
-    private double x;
-    private double y;
+    protected double x;
+    protected double y;
     private double rayon;
     private Color couleur;
 
@@ -28,14 +28,6 @@ public abstract class Astres {
         StdDraw.setPenRadius(0.05);
         StdDraw.setPenColor(couleur);
         StdDraw.filledCircle(x, y, rayon);
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
     }
 
     public double getX() {

@@ -52,9 +52,16 @@ public class UtilisermonHorlogeUniverselle {
 
         for(Planete planetes : systsol) {
             planetes.printAstres(planetes.getX(), planetes.getY());
+            System.out.println(planetes.getX());
+            System.out.println(planetes.getY());
+            //System.out.println("-------------------");
+            planetes.mouvementPlanete(planetes.getX(), planetes.getY(), Soleil);
+            System.out.println(planetes.getX());
+            System.out.println(planetes.getY());
+            //System.out.println("-------------------");
+            planetes.printAstres(planetes.getX(), planetes.getY());
+
         }
-
-
 
 
         /*Draw gui = new Draw("Le Système solaire");
