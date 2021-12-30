@@ -3,11 +3,16 @@ package HorlogeUniv.Time;
 import HorlogeUniv.Astres.Astres;
 import HorlogeUniv.Astres.Planete;
 import HorlogeUniv.Outils.Draw;
+import java.util.List;
+import java.util.Arrays;
+
+import java.awt.*;
 
 public class UtilisermonHorlogeUniverselle {
 
     public static void main(String[] args) {
         monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t1 jour s'est écoulé",2);
+
         Planete Mercure = new Planete(87.96);
         Planete Venus = new Planete(224.69);
         Planete Terre = new Planete(365.256);
@@ -17,7 +22,21 @@ public class UtilisermonHorlogeUniverselle {
         Planete Uranus = new Planete(30685.4);
         Planete Neptune = new Planete(60216.8);
 
-        Draw gui = new Draw("Le Système solaire");
+        List<Astres> systsol;
+
+        systsol = Arrays.asList(
+                Soleil,
+                Mercure,
+                Venus,
+                Terre,
+                Mars,
+                Jupiter,
+                Saturne,
+                Uranus,
+                Neptune
+        );
+
+        /*Draw gui = new Draw("Le Système solaire");
         gui.setCanvasSize(1000,1000);
         gui.setPenColor(Draw.ORANGE);
         gui.filledCircle(0.5, 0.55, 0.02);
@@ -47,7 +66,7 @@ public class UtilisermonHorlogeUniverselle {
         gui.filledCircle(0.85, 0.55, 0.005);
 
         gui.setPenColor(Draw.BOOK_BLUE);
-        gui.filledCircle(0.90, 0.55, 0.005);
+        gui.filledCircle(0.90, 0.55, 0.005);*/
 
         Thread t1 = new Thread(horlUnivun);
         System.out.println("Début du programme");

@@ -1,8 +1,17 @@
 package HorlogeUniv.Astres;
 
 
+import HorlogeUniv.Outils.StdDraw;
+
+import java.awt.*;
+
+
 public abstract class Astres {
     private double dureeRevolutionJours;
+    private double x;
+    private double y;
+    private double rayon;
+    private Color couleur;
 
     public Astres(double dureeRevolutionJours) {
         this.dureeRevolutionJours = dureeRevolutionJours;
@@ -14,6 +23,16 @@ public abstract class Astres {
 
     public void drawSphere(double drawX, double drawY, double sphereRadius) {
     }
+
+    public void printPlanete(Color couleur, double x, double y, double rayon){
+        StdDraw.setPenRadius(0.05);
+        StdDraw.setPenColor(couleur);
+        StdDraw.filledCircle(x, y, rayon);
+    }
+
+
+
+
 
     public void drawOrbitingSphere(int timeInterval) {
 
@@ -35,6 +54,4 @@ public abstract class Astres {
         // use whichever Draw method is provided by your API
         drawSphere(drawX, drawY, sphereRadius);
     }
-
-
 }
