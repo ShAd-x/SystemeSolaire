@@ -22,7 +22,7 @@ public class UtilisermonHorlogeUniverselle {
         Planete Uranus = new Planete(30685.4);
         Planete Neptune = new Planete(60216.8);
 
-        List<Astres> systsol;
+        List<Planete> systsol;
 
         systsol = Arrays.asList(
 
@@ -35,6 +35,10 @@ public class UtilisermonHorlogeUniverselle {
                 Uranus,
                 Neptune
         );
+
+        for(Astres planete : systsol) {
+        }
+
 
         /*Draw gui = new Draw("Le Système solaire");
         gui.setCanvasSize(1000,1000);

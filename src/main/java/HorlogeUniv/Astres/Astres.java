@@ -30,9 +30,13 @@ public abstract class Astres {
         StdDraw.filledCircle(x, y, rayon);
     }
 
+    public void setX(double x) {
+        this.x = x;
+    }
 
-
-
+    public void setY(double y) {
+        this.y = y;
+    }
 
     public void drawOrbitingSphere(int timeInterval) {
 
