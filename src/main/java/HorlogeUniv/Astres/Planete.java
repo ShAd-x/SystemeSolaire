@@ -1,6 +1,8 @@
 package HorlogeUniv.Astres;
 
 
+import HorlogeUniv.Outils.StdDraw;
+
 import java.awt.*;
 
 public class Planete extends Astres {
@@ -10,6 +12,10 @@ public class Planete extends Astres {
     public Planete(double dureeRevolutionJours, double x, double y, double rayon, Color couleur) {
         super(x, y, rayon, couleur);
         this.dureeRevolutionJours = dureeRevolutionJours;
+        this.x = x;
+        this.y = y;
+        this.rayon = rayon;
+        this.couleur = couleur;
     }
 
     public double getDureeRevolutionJours() {
@@ -24,16 +30,25 @@ public class Planete extends Astres {
         this.y = y;
     }
 
+    public void printPlanete(double x, double y, Etoile soleil) {
+        super.print();
+        StdDraw.setPenColor(Color.BLACK);
+        StdDraw.setPenRadius(0.001);
+        StdDraw.circle(soleil.x, soleil.y, rayon);
+    }
+
+
     public void mouvementPlanete(double x, double y, Etoile soleil) {
+
+
         double xMoving = x - soleil.x;
         double yMoving = y - soleil.y;
-        double xplanete = xMoving * Math.cos(Math.toRadians(360 / this.dureeRevolutionJours)) - yMoving * Math.sin(Math.toRadians(360 / this.dureeRevolutionJours));
-        double yplanete = -xMoving * Math.sin(Math.toRadians(360 / this.dureeRevolutionJours)) + yMoving * Math.cos(Math.toRadians(360 / this.dureeRevolutionJours));
-        System.out.println("#########");
-        System.out.println(xplanete + " " + " " + yplanete);
-        this.setCoordPlaneteX(xplanete);
-        this.setCoordPlaneteY(yplanete);
-        System.out.println("#########");
-        System.out.println(xplanete + " " + " " + yplanete);
+        double xplanete = xMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours)) - yMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours));
+        double yplanete = xMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours)) + yMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours));
+        //System.out.println("#########");
+        this.setCoordPlaneteX(soleil.getX() + xplanete);
+        this.setCoordPlaneteY(soleil.getY() + yplanete);
+        //System.out.println("#########");
+
     }
 }

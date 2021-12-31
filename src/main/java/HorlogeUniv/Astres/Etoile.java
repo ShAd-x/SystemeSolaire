@@ -1,6 +1,8 @@
 package HorlogeUniv.Astres;
 
 
+import HorlogeUniv.Outils.StdDraw;
+
 import java.awt.*;
 
 public class Etoile extends Astres {
@@ -10,7 +12,8 @@ public class Etoile extends Astres {
         super(x, y, rayon, couleur);
     }
 
-    public void printAstres(Color couleur, double x, double y, double rayon) {
-        super.printAstres(x, y);
+    public void printEtoile() {
+        super.print();
     }
+
 }

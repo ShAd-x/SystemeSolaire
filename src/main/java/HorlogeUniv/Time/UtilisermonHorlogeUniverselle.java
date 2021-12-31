@@ -14,7 +14,9 @@ import java.awt.*;
 public class UtilisermonHorlogeUniverselle {
 
     public static void main(String[] args) {
-        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t1 jour s'est écoulé",2);
+
+        StdDraw.setCanvasSize(900, 900);
+        StdDraw.setScale(0, 1);
 
         Planete Mercure = new Planete(87.96, 0.55, 0.55, 0.01, Color.LIGHT_GRAY);
         Planete Venus = new Planete(224.69, 0.60, 0.55, 0.01, Color.PINK);
@@ -29,7 +31,6 @@ public class UtilisermonHorlogeUniverselle {
         List<Planete> systsol;
 
         systsol = Arrays.asList(
-
                 Mercure,
                 Venus,
                 Terre,
@@ -40,28 +41,9 @@ public class UtilisermonHorlogeUniverselle {
                 Neptune
         );
 
-        Soleil.printAstres(Soleil.getX(), Soleil.getY());
+        //Soleil.printAstres(Soleil.getX(), Soleil.getY());
 
-        for (int i=0; i<8; i++)
-        {
-            StdDraw.setPenColor(Color.BLACK);
-            StdDraw.setPenRadius(0.1+(i*0.1));
-            StdDraw.circle(0.5, 0.55, 0.001);
 
-        }
-
-        for(Planete planetes : systsol) {
-            planetes.printAstres(planetes.getX(), planetes.getY());
-            System.out.println(planetes.getX());
-            System.out.println(planetes.getY());
-            //System.out.println("-------------------");
-            planetes.mouvementPlanete(planetes.getX(), planetes.getY(), Soleil);
-            System.out.println(planetes.getX());
-            System.out.println(planetes.getY());
-            //System.out.println("-------------------");
-            planetes.printAstres(planetes.getX(), planetes.getY());
-
-        }
 
 
         /*Draw gui = new Draw("Le Système solaire");
@@ -72,16 +54,13 @@ public class UtilisermonHorlogeUniverselle {
         gui.setPenColor(Draw.BLACK);
         for(int i = 0; i < 8; i++){ gui.circle(0.5, 0.55, 0.05+(i*0.05)); }*/
 
+        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t1 jour s'est écoulé", (long)1, systsol, Soleil);
 
         Thread t1 = new Thread(horlUnivun);
         System.out.println("Début du programme");
 
         t1.start();
-        pause(10000);
-        horlUnivun.setContinuer(false);
 
-        pause(1000);
-        System.out.println("Fin du programme");
     }
 
     public static void pause(long millis) {
