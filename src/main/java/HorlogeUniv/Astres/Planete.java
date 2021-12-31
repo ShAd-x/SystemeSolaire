@@ -32,9 +32,6 @@ public class Planete extends Astres {
 
     public void printPlanete(double x, double y, Etoile soleil) {
         super.print();
-        StdDraw.setPenColor(Color.BLACK);
-        StdDraw.setPenRadius(0.001);
-        StdDraw.circle(soleil.x, soleil.y, rayon);
     }
 
 
@@ -43,8 +40,8 @@ public class Planete extends Astres {
 
         double xMoving = x - soleil.x;
         double yMoving = y - soleil.y;
-        double xplanete = xMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours)) - yMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours));
-        double yplanete = xMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours)) + yMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours));
+        double xplanete = xMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours*2)) - yMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours*2));
+        double yplanete = xMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours*2)) + yMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours*2));
         //System.out.println("#########");
         this.setCoordPlaneteX(soleil.getX() + xplanete);
         this.setCoordPlaneteY(soleil.getY() + yplanete);

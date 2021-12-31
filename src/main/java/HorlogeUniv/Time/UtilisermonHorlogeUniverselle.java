@@ -41,25 +41,16 @@ public class UtilisermonHorlogeUniverselle {
                 Neptune
         );
 
-        //Soleil.printAstres(Soleil.getX(), Soleil.getY());
 
-
-
-
-        /*Draw gui = new Draw("Le Système solaire");
-        gui.setCanvasSize(1000,1000);
-        gui.setPenColor(Draw.ORANGE);
-        gui.filledCircle(0.5, 0.55, 0.02);
-
-        gui.setPenColor(Draw.BLACK);
-        for(int i = 0; i < 8; i++){ gui.circle(0.5, 0.55, 0.05+(i*0.05)); }*/
-
-        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t1 jour s'est écoulé", (long)1, systsol, Soleil);
+        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t10 jour s'est écoulé", (long)1, systsol, Soleil);
 
         Thread t1 = new Thread(horlUnivun);
+
         System.out.println("Début du programme");
 
+
         t1.start();
+
 
     }
 

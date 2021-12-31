@@ -32,25 +32,28 @@ public class monHorlogeUniverselle implements Runnable {
 
     public void run() {
 
-        long time = 1000/(70/secondesParJour);
+        long time = 1000/(10/secondesParJour);
         //Date date = new Date(currentTimeMillis());
         while(continuer) {
             try {
+
                 Thread.sleep(time);
-                soleil.printEtoile();
+                soleil.print();
+                soleil.printCircle();
                 for (Planete planetes : systeme_solaire)
                 {
                     planetes.printPlanete(planetes.getX(), planetes.getY(), soleil);
                     planetes.mouvementPlanete(planetes.getX(), planetes.getY(), soleil);
                 }
                 System.out.println(message);
-                date.add(Calendar.DATE, 1);
+                date.add(Calendar.DATE, 10);
                 System.out.println(date.getTime());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            /*StdDraw.show();
-            StdDraw.clear();*/
+
+            StdDraw.show();
+            //StdDraw.clear();
         }
     }
 }
