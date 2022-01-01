@@ -1,15 +1,13 @@
-package HorlogeUniv.Time;
+package fr.iut.SystemeSolaire;
 
-import HorlogeUniv.Astres.Astres;
-import HorlogeUniv.Astres.Etoile;
-import HorlogeUniv.Astres.Planete;
-import HorlogeUniv.Outils.Draw;
-import HorlogeUniv.Outils.StdDraw;
-
-import java.util.List;
-import java.util.Arrays;
+import fr.iut.SystemeSolaire.Astres.Etoile;
+import fr.iut.SystemeSolaire.Astres.Planete;
+import fr.iut.SystemeSolaire.Outils.StdDraw;
+import fr.iut.SystemeSolaire.Time.monHorlogeUniverselle;
 
 import java.awt.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class UtilisermonHorlogeUniverselle {
 

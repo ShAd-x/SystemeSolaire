@@ -1,4 +1,4 @@
-package HorlogeUniv.Outils;
+package fr.iut.SystemeSolaire.Outils;
 
 /******************************************************************************
  *  Compilation:  javac DrawListener.java

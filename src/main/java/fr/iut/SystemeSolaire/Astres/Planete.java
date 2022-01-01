@@ -1,7 +1,5 @@
-package HorlogeUniv.Astres;
+package fr.iut.SystemeSolaire.Astres;
 
-
-import HorlogeUniv.Outils.StdDraw;
 
 import java.awt.*;
 

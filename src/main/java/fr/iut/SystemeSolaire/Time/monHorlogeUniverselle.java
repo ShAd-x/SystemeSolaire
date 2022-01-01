@@ -1,10 +1,9 @@
-package HorlogeUniv.Time;
+package fr.iut.SystemeSolaire.Time;
 
-import HorlogeUniv.Astres.Etoile;
-import HorlogeUniv.Astres.Planete;
-import HorlogeUniv.Outils.StdDraw;
+import fr.iut.SystemeSolaire.Astres.Etoile;
+import fr.iut.SystemeSolaire.Astres.Planete;
+import fr.iut.SystemeSolaire.Outils.StdDraw;
 
-import java.awt.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
