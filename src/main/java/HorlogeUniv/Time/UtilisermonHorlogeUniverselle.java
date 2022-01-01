@@ -42,7 +42,7 @@ public class UtilisermonHorlogeUniverselle {
         );
 
 
-        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t10 jour s'est écoulé", (long)1, systsol, Soleil);
+        monHorlogeUniverselle horlUnivun = new monHorlogeUniverselle("\t\t2 jours se sont écoulés", (long)10, systsol, Soleil);
 
         Thread t1 = new Thread(horlUnivun);
 
