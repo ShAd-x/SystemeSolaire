@@ -16,10 +16,6 @@ public class Planete extends Astres {
         this.couleur = couleur;
     }
 
-    public double getDureeRevolutionJours() {
-        return dureeRevolutionJours;
-    }
-
     public void setCoordPlaneteX(double x) {
         this.x = x;
     }
@@ -40,10 +36,7 @@ public class Planete extends Astres {
         double yMoving = y - soleil.y;
         double xplanete = xMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours*2)) - yMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours*2));
         double yplanete = xMoving * Math.sin(Math.toRadians(360/this.dureeRevolutionJours*2)) + yMoving * Math.cos(Math.toRadians(360/this.dureeRevolutionJours*2));
-        //System.out.println("#########");
         this.setCoordPlaneteX(soleil.getX() + xplanete);
         this.setCoordPlaneteY(soleil.getY() + yplanete);
-        //System.out.println("#########");
-
     }
 }

@@ -18,7 +18,7 @@ public class Etoile extends Astres {
 
     public void printCircle() {
         double rad = 0.05;
-        StdDraw.setPenColor(Color.BLACK);
+        StdDraw.setPenColor(Color.WHITE);
         StdDraw.setPenRadius(0.001);
         for (int i = 0; i < 8; i++)
         {

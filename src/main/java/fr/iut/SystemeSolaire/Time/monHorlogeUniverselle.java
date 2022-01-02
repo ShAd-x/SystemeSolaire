@@ -4,6 +4,7 @@ import fr.iut.SystemeSolaire.Astres.Etoile;
 import fr.iut.SystemeSolaire.Astres.Planete;
 import fr.iut.SystemeSolaire.Outils.StdDraw;
 
+import java.awt.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -32,12 +33,9 @@ public class monHorlogeUniverselle implements Runnable {
     public void run() {
         int cpt=0;
         long time = 1000/(10/secondesParJour);
-        //Date date = new Date(currentTimeMillis());
         while(continuer) {
             try {
-
-
-
+                StdDraw.clear(Color.BLACK);
                 soleil.print();
                 soleil.printCircle();
                 for (Planete planetes : systeme_solaire)
