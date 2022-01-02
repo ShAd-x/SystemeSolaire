@@ -26,10 +26,6 @@ public class monHorlogeUniverselle implements Runnable {
         this.soleil = soleil;
     }
 
-    public void setContinuer(boolean continuer){
-        this.continuer = continuer;
-    }
-
     public void run() {
         int cpt=0;
         long time = 1000/(10/secondesParJour);
